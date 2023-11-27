@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/BackgroundBack"
+    tools:context=".MainWeatherNext">
+    <LinearLayout
+        android:layout_marginTop="47sp"
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            style="@style/imgBck"
+            android:layout_width="41dp"
+            android:layout_height="29dp"
+            android:contentDescription="@string/description" />
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Back"
+            android:layout_gravity="center"
+            android:textSize="16sp"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/cityName"
+        android:textSize="25sp"
+        android:layout_marginTop="52sp"
+        android:layout_below="@+id/back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:text="@string/weatherForTommorow"/>
+    <TableLayout
+        android:layout_below="@+id/cityName"
+        style="@style/tableLayoutBck"
+        android:id="@+id/nextTab">
+        <TableRow
+            android:layout_marginTop="23dp"
+            android:layout_marginStart="23dp"
+            android:layout_marginEnd="23dp">
+            <ImageView
+                android:id="@+id/weatherTommorow"
+                android:contentDescription="@string/description"
+                style="@style/imagetable"
+                android:src="@drawable/cloudy_sunny"/>
+            <LinearLayout
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/tommorow"
+                    style="@style/imgBack.color"
+                    android:text="Tommorow"
+                    android:textSize="20sp" />
+                <TextView
+                    android:id="@+id/degreeTommorow"
+                    style="@style/imgBack.color"
+                    android:text="25°"
+                    android:textSize="42sp" />
+                <TextView
+                    android:id="@+id/infoTommorow"
+                    style="@style/imgBack.color"
+                    android:text="Mostly Cloudy"
+                    android:textSize="17sp" />
+            </LinearLayout>
+        </TableRow>
+        <TableLayout
+            android:layout_marginEnd="23dp"
+            android:layout_marginStart="23dp">
+            <TableRow>
+                <LinearLayout
+                    style="@style/verticalLinearLayout">
+                    <ImageView
+                        android:contentDescription="@string/description"
+                        style="@style/verticalImage"
+                        android:src="@drawable/barometer" />
+                    <TextView
+                        android:id="@+id/rainTommorow"
+                        style="@style/verticalText.bold"
+                        android:text="1000hPa" />
+                    <TextView
+                        style="@style/verticalText.small"
+                        android:text="@string/rain"/>
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/verticalLinearLayout">
+                    <ImageView
+                        android:contentDescription="@string/description"
+                        style="@style/verticalImage"
+                        android:src="@drawable/wind" />
+                    <TextView
+                        android:id="@+id/windTommorow"
+                        style="@style/verticalText.bold"
+                        android:text="12km/h" />
+                    <TextView
+                        style="@style/verticalText.small"
+                        android:text="wind speed"/>
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/verticalLinearLayout">
+                    <ImageView
+                        android:contentDescription="@string/description"
+                        style="@style/verticalImage"
+                        android:src="@drawable/humidity" />
+                    <TextView
+                        android:id="@+id/humidityTommorow"
+                        style="@style/verticalText.bold"
+                        android:text="18%" />
+                    <TextView
+                        style="@style/verticalText.small"
+                        android:text="humidity"/>
+                </LinearLayout>
+            </TableRow>
+        </TableLayout>
+    </TableLayout>
+    <ScrollView
+        style="@style/scrollViewBack"
+        android:layout_below="@id/nextTab">
+        <TableLayout style="@style/tableLayoutBack" android:id="@+id/tableLayoutPogoda2"
+            android:layout_gravity="center">
+            <TextView/>
+        </TableLayout>
+    </ScrollView>
+</RelativeLayout>

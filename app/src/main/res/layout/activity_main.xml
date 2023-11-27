@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/gradient"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.FormActivity">
+    <TextView
+        android:id="@+id/cityName"
+        android:textSize="45sp"
+        android:layout_marginTop="46sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:text="@string/empty"/>
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        style="?android:attr/progressBarStyle"
+        android:outlineAmbientShadowColor="@color/white"
+        android:layout_width="70sp"
+        android:layout_height="70sp" />
+
+    <TextView
+        android:layout_below="@+id/cityName"
+        android:id="@+id/napis"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/empty"
+        android:layout_marginBottom="32dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:textSize="17sp" />
+    <ImageView
+        android:contentDescription="@string/description"
+        android:id="@+id/image"
+        android:layout_width="221dp"
+        android:layout_height="126dp"
+        android:layout_below="@id/napis"
+        android:layout_centerHorizontal="true"
+        android:src="@color/transparent" />
+    <LinearLayout
+        android:id="@+id/tekst2"
+        android:layout_below="@id/image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/infoMain"
+            android:layout_marginTop="13dp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="@string/empty"
+            android:textColor="@color/white"/>
+        <TextView
+            android:id="@+id/degreeMain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/empty"
+            android:textStyle="bold"
+            android:textSize="48sp"
+            android:textColor="@color/white"/>
+        <TextView
+            android:id="@+id/seaGroundLevel"
+            android:layout_marginTop="3dp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="@string/empty"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+    <TableLayout
+        android:id="@+id/tablica"
+        android:layout_width="328dp"
+        android:layout_height="120dp"
+        android:layout_below="@id/tekst2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="55dp"
+        android:background="@drawable/radius">
+        <TableRow>
+            <LinearLayout
+                style="@style/verticalLinearLayout">
+                <ImageView
+                    android:contentDescription="@string/description"
+                    style="@style/verticalImage"
+                    android:src="@drawable/barometer" />
+                <TextView
+                    android:id="@+id/barometerMain"
+                    style="@style/verticalText.bold"
+                    android:text="22%" />
+                <TextView
+                    style="@style/verticalText.small"
+                    android:text="@string/rain"/>
+            </LinearLayout>
+            <LinearLayout
+                style="@style/verticalLinearLayout">
+                <ImageView
+                    android:contentDescription="@string/description"
+                    style="@style/verticalImage"
+                    android:src="@drawable/wind" />
+                <TextView
+                    android:id="@+id/windMain"
+                    style="@style/verticalText.bold"
+                    android:text="12km/h" />
+                <TextView
+                    style="@style/verticalText.small"
+                    android:text="wind speed"/>
+            </LinearLayout>
+            <LinearLayout
+                style="@style/verticalLinearLayout">
+                <ImageView
+                    android:contentDescription="@string/description"
+                    style="@style/verticalImage"
+                    android:src="@drawable/humidity" />
+                <TextView
+                    android:id="@+id/humidityMain"
+                    style="@style/verticalText.bold"
+                    android:text="18%" />
+                <TextView
+                    style="@style/verticalText.small"
+                    android:text="humidity"/>
+            </LinearLayout>
+        </TableRow>
+    </TableLayout>
+    <RelativeLayout
+        android:id="@+id/napis1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tablica"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="22dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:text="Today"
+            android:textColor="@color/gold"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/nextBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="15dp"
+            android:text="Next 4 day >"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+    <View
+        android:layout_below="@+id/napis1"
+        android:id="@+id/divider"
+        android:layout_marginTop="10sp"
+        android:layout_marginStart="15sp"
+        android:layout_marginEnd="15sp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider" />
+    <HorizontalScrollView
+        android:layout_below="@id/napis1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbarThumbHorizontal="@color/transparent"
+        android:layout_marginTop="2dp">
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_marginStart="12sp"
+            android:layout_marginEnd="12sp"
+            android:layout_height="match_parent">
+            <TableRow android:id="@+id/timeWeather" android:layout_marginTop="32sp">
+                <TextView/>
+            </TableRow>
+        </TableLayout>
+    </HorizontalScrollView>
+</RelativeLayout>
